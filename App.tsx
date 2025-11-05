@@ -1,8 +1,8 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { JobDescription, MatchResult } from './types';
 import { analyzeJobMatches } from './services/geminiService';
+// Corrected line in App.tsx
 import { PlusIcon, TrashIcon, SparklesIcon, CheckCircleIcon, XCircleIcon, ChevronDownIcon, ChevronUpIcon } from './components/icons';
-
 const App: React.FC = () => {
   const [resume, setResume] = useState<string>(() => localStorage.getItem('resume') || '');
   const [jobs, setJobs] = useState<JobDescription[]>(() => {
